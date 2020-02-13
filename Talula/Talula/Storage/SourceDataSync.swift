@@ -21,8 +21,7 @@ class SourceDataSync {
      2. Updates persistent data by private function.
      3. Sends error message if necessary.
      
-     
-     - Parameter all: Information saying if all data is neccessary to download.
+     - Parameter all: Information describing if it is neccessary to download all data.
      */
     func fetchMeteorites(all: Bool, completion: @escaping(Error?) -> Void) {
         downloader.getMeteorites(all: all) { [weak self] data, error in
@@ -51,7 +50,6 @@ class SourceDataSync {
                 let error = NSError(domain: Constants.error.dataDomain, code: Constants.error.syncFailure, userInfo: nil)
                 completion(error)
             }
-            
         }
     }
     

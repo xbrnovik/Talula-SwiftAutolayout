@@ -186,9 +186,9 @@
 		23FF73C823F446B300EDD5AC /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				23A55F8723F592C20055991A /* MeteoriteResponse.swift */,
-				23FF73C923F446B300EDD5AC /* SourceDataDownloader.swift */,
 				23FF73CC23F446B300EDD5AC /* SourceDataSync.swift */,
+				23FF73C923F446B300EDD5AC /* SourceDataDownloader.swift */,
+				23A55F8723F592C20055991A /* MeteoriteResponse.swift */,
 				23FF73CE23F446B300EDD5AC /* MeteoriteStorage.swift */,
 				23FF73CD23F446B300EDD5AC /* Meteorite+CoreDataProperties.swift */,
 				23FF73CF23F446B300EDD5AC /* Meteorite+CoreDataClass.swift */,
