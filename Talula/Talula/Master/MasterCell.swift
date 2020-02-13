@@ -65,10 +65,10 @@ class MasterCell: UITableViewCell {
                 // iconImageView
                 iconImageView.widthAnchor.constraint(equalToConstant: UIIconSize.medium),
                 iconImageView.heightAnchor.constraint(equalToConstant: UIIconSize.medium),
-                iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIMargin.big+5),
+                iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIMargin.large),
                 iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
                 // titleLabel
-                titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: UIMargin.big+5),
+                titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: UIMargin.large),
                 titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: UIMargin.medium),
                 titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -UIMargin.big),
                 // subTitleLabel

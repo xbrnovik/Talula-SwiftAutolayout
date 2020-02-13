@@ -136,7 +136,7 @@ class InformationView: BaseView {
                 innerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
                 innerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
                 // descriptionAppLabel
-                descriptionAppLabel.topAnchor.constraint(equalTo: innerView.topAnchor, constant: 20),
+                descriptionAppLabel.topAnchor.constraint(equalTo: innerView.topAnchor, constant: UIMargin.large),
                 descriptionAppLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: UIMargin.big),
                 descriptionAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -UIMargin.big),
                 // iconsDescriptionStackView

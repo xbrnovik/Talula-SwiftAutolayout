@@ -15,7 +15,7 @@ class InformationContactStackView: UIStackView {
         let view = InformationSmallRowView()
         view.iconImageView.image = #imageLiteral(resourceName: "InformationGmail")
         view.titleLabel.text = "dia.brnovikova@gmail.com"
-        view.titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        view.titleLabel.font = Font.boldMediumFont
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -24,7 +24,7 @@ class InformationContactStackView: UIStackView {
         let view = InformationSmallRowView()
         view.iconImageView.image = #imageLiteral(resourceName: "InformationLinkedIn")
         view.titleLabel.text = "Diana Brnovik"
-        view.titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        view.titleLabel.font = Font.boldMediumFont
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

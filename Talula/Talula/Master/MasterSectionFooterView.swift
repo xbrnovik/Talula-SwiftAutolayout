@@ -52,7 +52,7 @@ class MasterSectionFooterView: UIView {
                 separatorView.topAnchor.constraint(equalTo: topAnchor),
                 separatorView.heightAnchor.constraint(equalToConstant: 2),
                 // titleLabel
-                titleLabel.topAnchor.constraint(equalTo: separatorView.topAnchor, constant: 10),
+                titleLabel.topAnchor.constraint(equalTo: separatorView.topAnchor, constant: UIMargin.medium),
                 titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
                 titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
             ])

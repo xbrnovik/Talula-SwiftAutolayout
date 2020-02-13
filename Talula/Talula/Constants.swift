@@ -14,6 +14,7 @@ enum UIMargin {
     static let small: CGFloat = 5
     static let medium: CGFloat = 10
     static let big: CGFloat = 15
+    static let large: CGFloat = 20
 }
 
 enum UIIconSize {
@@ -57,6 +58,7 @@ enum Font {
     static let titleFont = UIFont.preferredFont(forTextStyle: .headline)
     static let bodyFont = UIFont.preferredFont(forTextStyle: .body)
     static let subtitleFont = UIFont.preferredFont(forTextStyle: .footnote)
+    static let boldMediumFont = UIFont.boldSystemFont(ofSize: 15)
 }
 
 struct Formatter {
