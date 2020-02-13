@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23FF739523F4460000EDD5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF739423F4460000EDD5AC /* AppDelegate.swift */; };
+		23FF739723F4460000EDD5AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF739623F4460000EDD5AC /* SceneDelegate.swift */; };
+		23FF739923F4460000EDD5AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF739823F4460000EDD5AC /* ViewController.swift */; };
+		23FF739C23F4460000EDD5AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FF739A23F4460000EDD5AC /* Main.storyboard */; };
+		23FF73A423F4460200EDD5AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FF73A223F4460200EDD5AC /* LaunchScreen.storyboard */; };
+		23FF73AF23F4460200EDD5AC /* TalulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73AE23F4460200EDD5AC /* TalulaTests.swift */; };
+		23FF73DA23F446B400EDD5AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73BA23F446B300EDD5AC /* Constants.swift */; };
+		23FF73DB23F446B400EDD5AC /* InformationContactStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73BC23F446B300EDD5AC /* InformationContactStackView.swift */; };
+		23FF73DC23F446B400EDD5AC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73BD23F446B300EDD5AC /* InformationViewController.swift */; };
+		23FF73DD23F446B400EDD5AC /* InformationSmallRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73BE23F446B300EDD5AC /* InformationSmallRowView.swift */; };
+		23FF73DE23F446B400EDD5AC /* InformationBigRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73BF23F446B300EDD5AC /* InformationBigRowView.swift */; };
+		23FF73DF23F446B400EDD5AC /* InformationIconsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73C023F446B300EDD5AC /* InformationIconsStackView.swift */; };
+		23FF73E023F446B400EDD5AC /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73C123F446B300EDD5AC /* InformationView.swift */; };
+		23FF73E123F446B400EDD5AC /* MasterSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73C323F446B300EDD5AC /* MasterSectionFooterView.swift */; };
+		23FF73E223F446B400EDD5AC /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73C423F446B300EDD5AC /* MasterView.swift */; };
+		23FF73E323F446B400EDD5AC /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73C523F446B300EDD5AC /* MasterViewController.swift */; };
+		23FF73E423F446B400EDD5AC /* MasterDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73C623F446B300EDD5AC /* MasterDelegateDataSource.swift */; };
+		23FF73E523F446B400EDD5AC /* MasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73C723F446B300EDD5AC /* MasterCell.swift */; };
+		23FF73E623F446B400EDD5AC /* SourceDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73C923F446B300EDD5AC /* SourceDataDownloader.swift */; };
+		23FF73E723F446B400EDD5AC /* Talula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73CA23F446B300EDD5AC /* Talula.xcdatamodeld */; };
+		23FF73E823F446B400EDD5AC /* SourceDataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73CC23F446B300EDD5AC /* SourceDataSync.swift */; };
+		23FF73E923F446B400EDD5AC /* Meteorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73CD23F446B300EDD5AC /* Meteorite+CoreDataProperties.swift */; };
+		23FF73EA23F446B400EDD5AC /* MeteoriteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73CE23F446B300EDD5AC /* MeteoriteStorage.swift */; };
+		23FF73EB23F446B400EDD5AC /* Meteorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73CF23F446B300EDD5AC /* Meteorite+CoreDataClass.swift */; };
+		23FF73EC23F446B400EDD5AC /* MeteoriteDataURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D023F446B300EDD5AC /* MeteoriteDataURLFactory.swift */; };
+		23FF73ED23F446B400EDD5AC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D223F446B300EDD5AC /* DetailView.swift */; };
+		23FF73EE23F446B400EDD5AC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D323F446B300EDD5AC /* DetailViewController.swift */; };
+		23FF73EF23F446B400EDD5AC /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D423F446B300EDD5AC /* AppStarter.swift */; };
+		23FF73F023F446B400EDD5AC /* DataRefreshOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D523F446B300EDD5AC /* DataRefreshOperation.swift */; };
+		23FF73F123F446B400EDD5AC /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D623F446B400EDD5AC /* CoreDataContainer.swift */; };
+		23FF73F223F446B400EDD5AC /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D723F446B400EDD5AC /* DataSync.swift */; };
+		23FF73F323F446B400EDD5AC /* TaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D823F446B400EDD5AC /* TaskScheduler.swift */; };
+		23FF73F823F44BFE00EDD5AC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73F723F44BFE00EDD5AC /* BaseView.swift */; };
+		23FF73FA23F4504D00EDD5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FF73F923F4504D00EDD5AC /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23FF73AB23F4460200EDD5AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23FF738923F4460000EDD5AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23FF739023F4460000EDD5AC;
+			remoteInfo = Talula;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23FF739123F4460000EDD5AC /* Talula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talula.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23FF739423F4460000EDD5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23FF739623F4460000EDD5AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		23FF739823F4460000EDD5AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23FF739B23F4460000EDD5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23FF73A323F4460200EDD5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23FF73A523F4460200EDD5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23FF73AA23F4460200EDD5AC /* TalulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23FF73AE23F4460200EDD5AC /* TalulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalulaTests.swift; sourceTree = "<group>"; };
+		23FF73B023F4460200EDD5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23FF73BA23F446B300EDD5AC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23FF73BC23F446B300EDD5AC /* InformationContactStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationContactStackView.swift; sourceTree = "<group>"; };
+		23FF73BD23F446B300EDD5AC /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		23FF73BE23F446B300EDD5AC /* InformationSmallRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationSmallRowView.swift; sourceTree = "<group>"; };
+		23FF73BF23F446B300EDD5AC /* InformationBigRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationBigRowView.swift; sourceTree = "<group>"; };
+		23FF73C023F446B300EDD5AC /* InformationIconsStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationIconsStackView.swift; sourceTree = "<group>"; };
+		23FF73C123F446B300EDD5AC /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		23FF73C323F446B300EDD5AC /* MasterSectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterSectionFooterView.swift; sourceTree = "<group>"; };
+		23FF73C423F446B300EDD5AC /* MasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		23FF73C523F446B300EDD5AC /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		23FF73C623F446B300EDD5AC /* MasterDelegateDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterDelegateDataSource.swift; sourceTree = "<group>"; };
+		23FF73C723F446B300EDD5AC /* MasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterCell.swift; sourceTree = "<group>"; };
+		23FF73C923F446B300EDD5AC /* SourceDataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceDataDownloader.swift; sourceTree = "<group>"; };
+		23FF73CB23F446B300EDD5AC /* Talula.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Talula.xcdatamodel; sourceTree = "<group>"; };
+		23FF73CC23F446B300EDD5AC /* SourceDataSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceDataSync.swift; sourceTree = "<group>"; };
+		23FF73CD23F446B300EDD5AC /* Meteorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		23FF73CE23F446B300EDD5AC /* MeteoriteStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteoriteStorage.swift; sourceTree = "<group>"; };
+		23FF73CF23F446B300EDD5AC /* Meteorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		23FF73D023F446B300EDD5AC /* MeteoriteDataURLFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteoriteDataURLFactory.swift; sourceTree = "<group>"; };
+		23FF73D223F446B300EDD5AC /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		23FF73D323F446B300EDD5AC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		23FF73D423F446B300EDD5AC /* AppStarter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
+		23FF73D523F446B300EDD5AC /* DataRefreshOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRefreshOperation.swift; sourceTree = "<group>"; };
+		23FF73D623F446B400EDD5AC /* CoreDataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataContainer.swift; sourceTree = "<group>"; };
+		23FF73D723F446B400EDD5AC /* DataSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSync.swift; sourceTree = "<group>"; };
+		23FF73D823F446B400EDD5AC /* TaskScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskScheduler.swift; sourceTree = "<group>"; };
+		23FF73F723F44BFE00EDD5AC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		23FF73F923F4504D00EDD5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23FF738E23F4460000EDD5AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FF73A723F4460200EDD5AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23FF738823F4460000EDD5AC = {
+			isa = PBXGroup;
+			children = (
+				23FF739323F4460000EDD5AC /* Talula */,
+				23FF73AD23F4460200EDD5AC /* TalulaTests */,
+				23FF739223F4460000EDD5AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23FF739223F4460000EDD5AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23FF739123F4460000EDD5AC /* Talula.app */,
+				23FF73AA23F4460200EDD5AC /* TalulaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23FF739323F4460000EDD5AC /* Talula */ = {
+			isa = PBXGroup;
+			children = (
+				23FF739423F4460000EDD5AC /* AppDelegate.swift */,
+				23FF739623F4460000EDD5AC /* SceneDelegate.swift */,
+				23FF739823F4460000EDD5AC /* ViewController.swift */,
+				23FF73BB23F446B300EDD5AC /* About */,
+				23FF73D423F446B300EDD5AC /* AppStarter.swift */,
+				23FF73F923F4504D00EDD5AC /* Assets.xcassets */,
+				23FF73BA23F446B300EDD5AC /* Constants.swift */,
+				23FF73D623F446B400EDD5AC /* CoreDataContainer.swift */,
+				23FF73D523F446B300EDD5AC /* DataRefreshOperation.swift */,
+				23FF73F723F44BFE00EDD5AC /* BaseView.swift */,
+				23FF73D723F446B400EDD5AC /* DataSync.swift */,
+				23FF73D123F446B300EDD5AC /* Detail */,
+				23FF73C223F446B300EDD5AC /* Master */,
+				23FF73C823F446B300EDD5AC /* Storage */,
+				23FF73D823F446B400EDD5AC /* TaskScheduler.swift */,
+				23FF739A23F4460000EDD5AC /* Main.storyboard */,
+				23FF73A223F4460200EDD5AC /* LaunchScreen.storyboard */,
+				23FF73A523F4460200EDD5AC /* Info.plist */,
+			);
+			path = Talula;
+			sourceTree = "<group>";
+		};
+		23FF73AD23F4460200EDD5AC /* TalulaTests */ = {
+			isa = PBXGroup;
+			children = (
+				23FF73AE23F4460200EDD5AC /* TalulaTests.swift */,
+				23FF73B023F4460200EDD5AC /* Info.plist */,
+			);
+			path = TalulaTests;
+			sourceTree = "<group>";
+		};
+		23FF73BB23F446B300EDD5AC /* About */ = {
+			isa = PBXGroup;
+			children = (
+				23FF73BD23F446B300EDD5AC /* InformationViewController.swift */,
+				23FF73BE23F446B300EDD5AC /* InformationSmallRowView.swift */,
+				23FF73BC23F446B300EDD5AC /* InformationContactStackView.swift */,
+				23FF73BF23F446B300EDD5AC /* InformationBigRowView.swift */,
+				23FF73C023F446B300EDD5AC /* InformationIconsStackView.swift */,
+				23FF73C123F446B300EDD5AC /* InformationView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		23FF73C223F446B300EDD5AC /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				23FF73C323F446B300EDD5AC /* MasterSectionFooterView.swift */,
+				23FF73C423F446B300EDD5AC /* MasterView.swift */,
+				23FF73C523F446B300EDD5AC /* MasterViewController.swift */,
+				23FF73C623F446B300EDD5AC /* MasterDelegateDataSource.swift */,
+				23FF73C723F446B300EDD5AC /* MasterCell.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		23FF73C823F446B300EDD5AC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				23FF73C923F446B300EDD5AC /* SourceDataDownloader.swift */,
+				23FF73CA23F446B300EDD5AC /* Talula.xcdatamodeld */,
+				23FF73CC23F446B300EDD5AC /* SourceDataSync.swift */,
+				23FF73CD23F446B300EDD5AC /* Meteorite+CoreDataProperties.swift */,
+				23FF73CE23F446B300EDD5AC /* MeteoriteStorage.swift */,
+				23FF73CF23F446B300EDD5AC /* Meteorite+CoreDataClass.swift */,
+				23FF73D023F446B300EDD5AC /* MeteoriteDataURLFactory.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		23FF73D123F446B300EDD5AC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				23FF73D223F446B300EDD5AC /* DetailView.swift */,
+				23FF73D323F446B300EDD5AC /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23FF739023F4460000EDD5AC /* Talula */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23FF73B323F4460200EDD5AC /* Build configuration list for PBXNativeTarget "Talula" */;
+			buildPhases = (
+				23FF738D23F4460000EDD5AC /* Sources */,
+				23FF738E23F4460000EDD5AC /* Frameworks */,
+				23FF738F23F4460000EDD5AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Talula;
+			productName = Talula;
+			productReference = 23FF739123F4460000EDD5AC /* Talula.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23FF73A923F4460200EDD5AC /* TalulaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23FF73B623F4460200EDD5AC /* Build configuration list for PBXNativeTarget "TalulaTests" */;
+			buildPhases = (
+				23FF73A623F4460200EDD5AC /* Sources */,
+				23FF73A723F4460200EDD5AC /* Frameworks */,
+				23FF73A823F4460200EDD5AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23FF73AC23F4460200EDD5AC /* PBXTargetDependency */,
+			);
+			name = TalulaTests;
+			productName = TalulaTests;
+			productReference = 23FF73AA23F4460200EDD5AC /* TalulaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23FF738923F4460000EDD5AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Diana Brnovik";
+				TargetAttributes = {
+					23FF739023F4460000EDD5AC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					23FF73A923F4460200EDD5AC = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 23FF739023F4460000EDD5AC;
+					};
+				};
+			};
+			buildConfigurationList = 23FF738C23F4460000EDD5AC /* Build configuration list for PBXProject "Talula" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23FF738823F4460000EDD5AC;
+			productRefGroup = 23FF739223F4460000EDD5AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23FF739023F4460000EDD5AC /* Talula */,
+				23FF73A923F4460200EDD5AC /* TalulaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23FF738F23F4460000EDD5AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FF73A423F4460200EDD5AC /* LaunchScreen.storyboard in Resources */,
+				23FF73FA23F4504D00EDD5AC /* Assets.xcassets in Resources */,
+				23FF739C23F4460000EDD5AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FF73A823F4460200EDD5AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23FF738D23F4460000EDD5AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FF739923F4460000EDD5AC /* ViewController.swift in Sources */,
+				23FF739523F4460000EDD5AC /* AppDelegate.swift in Sources */,
+				23FF73E223F446B400EDD5AC /* MasterView.swift in Sources */,
+				23FF73E723F446B400EDD5AC /* Talula.xcdatamodeld in Sources */,
+				23FF73DE23F446B400EDD5AC /* InformationBigRowView.swift in Sources */,
+				23FF73F123F446B400EDD5AC /* CoreDataContainer.swift in Sources */,
+				23FF73E623F446B400EDD5AC /* SourceDataDownloader.swift in Sources */,
+				23FF73F023F446B400EDD5AC /* DataRefreshOperation.swift in Sources */,
+				23FF73E823F446B400EDD5AC /* SourceDataSync.swift in Sources */,
+				23FF73ED23F446B400EDD5AC /* DetailView.swift in Sources */,
+				23FF73E323F446B400EDD5AC /* MasterViewController.swift in Sources */,
+				23FF73EB23F446B400EDD5AC /* Meteorite+CoreDataClass.swift in Sources */,
+				23FF73E123F446B400EDD5AC /* MasterSectionFooterView.swift in Sources */,
+				23FF73EC23F446B400EDD5AC /* MeteoriteDataURLFactory.swift in Sources */,
+				23FF73EE23F446B400EDD5AC /* DetailViewController.swift in Sources */,
+				23FF73DD23F446B400EDD5AC /* InformationSmallRowView.swift in Sources */,
+				23FF73DF23F446B400EDD5AC /* InformationIconsStackView.swift in Sources */,
+				23FF739723F4460000EDD5AC /* SceneDelegate.swift in Sources */,
+				23FF73E523F446B400EDD5AC /* MasterCell.swift in Sources */,
+				23FF73E923F446B400EDD5AC /* Meteorite+CoreDataProperties.swift in Sources */,
+				23FF73F323F446B400EDD5AC /* TaskScheduler.swift in Sources */,
+				23FF73E423F446B400EDD5AC /* MasterDelegateDataSource.swift in Sources */,
+				23FF73DB23F446B400EDD5AC /* InformationContactStackView.swift in Sources */,
+				23FF73E023F446B400EDD5AC /* InformationView.swift in Sources */,
+				23FF73EF23F446B400EDD5AC /* AppStarter.swift in Sources */,
+				23FF73F223F446B400EDD5AC /* DataSync.swift in Sources */,
+				23FF73DA23F446B400EDD5AC /* Constants.swift in Sources */,
+				23FF73F823F44BFE00EDD5AC /* BaseView.swift in Sources */,
+				23FF73EA23F446B400EDD5AC /* MeteoriteStorage.swift in Sources */,
+				23FF73DC23F446B400EDD5AC /* InformationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FF73A623F4460200EDD5AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FF73AF23F4460200EDD5AC /* TalulaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23FF73AC23F4460200EDD5AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23FF739023F4460000EDD5AC /* Talula */;
+			targetProxy = 23FF73AB23F4460200EDD5AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		23FF739A23F4460000EDD5AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23FF739B23F4460000EDD5AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		23FF73A223F4460200EDD5AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23FF73A323F4460200EDD5AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23FF73B123F4460200EDD5AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23FF73B223F4460200EDD5AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23FF73B423F4460200EDD5AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYSUFL54D5;
+				INFOPLIST_FILE = Talula/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.xbrnovik.autolayout.Talula;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		23FF73B523F4460200EDD5AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYSUFL54D5;
+				INFOPLIST_FILE = Talula/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.xbrnovik.autolayout.Talula;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		23FF73B723F4460200EDD5AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYSUFL54D5;
+				INFOPLIST_FILE = TalulaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.xbrnovik.autolayout.TalulaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talula.app/Talula";
+			};
+			name = Debug;
+		};
+		23FF73B823F4460200EDD5AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYSUFL54D5;
+				INFOPLIST_FILE = TalulaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.xbrnovik.autolayout.TalulaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talula.app/Talula";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23FF738C23F4460000EDD5AC /* Build configuration list for PBXProject "Talula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23FF73B123F4460200EDD5AC /* Debug */,
+				23FF73B223F4460200EDD5AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23FF73B323F4460200EDD5AC /* Build configuration list for PBXNativeTarget "Talula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23FF73B423F4460200EDD5AC /* Debug */,
+				23FF73B523F4460200EDD5AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23FF73B623F4460200EDD5AC /* Build configuration list for PBXNativeTarget "TalulaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23FF73B723F4460200EDD5AC /* Debug */,
+				23FF73B823F4460200EDD5AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		23FF73CA23F446B300EDD5AC /* Talula.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				23FF73CB23F446B300EDD5AC /* Talula.xcdatamodel */,
+			);
+			currentVersion = 23FF73CB23F446B300EDD5AC /* Talula.xcdatamodel */;
+			path = Talula.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 23FF738923F4460000EDD5AC /* Project object */;
+}
