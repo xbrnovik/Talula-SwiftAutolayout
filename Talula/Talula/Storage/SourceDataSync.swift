@@ -25,7 +25,8 @@ class SourceDataSync {
      - Parameter all: Information saying if all data is neccessary to download.
      */
     func fetchMeteorites(all: Bool, completion: @escaping(Error?) -> Void) {
-        downloader.getMeteorites(all: all) { data, error in
+        downloader.getMeteorites(all: all) { [weak self] data, error in
+            guard let self = self else { return }
             // Checks if is error a result, if true then returns.
             if let error = error {
                 completion(error)
@@ -55,7 +56,7 @@ class SourceDataSync {
     }
     
     /**
-     Saves new meteorites and updates old meteorites using MeteoriteStorage class.
+     Performs update. Saves new meteorites and updates old meteorites using MeteoriteStorage class.
      
      - Parameters:
             - dataDictionary: Dictionary of obtained data.
@@ -77,7 +78,7 @@ class SourceDataSync {
                 } catch let error as NSError {
                     NSLog("Update error: \(error.debugDescription).")
                     guard let meteoriteObject = meteoriteObject else {
-                        NSLog("")
+                        NSLog("Update error: Deletion of meteorite object failed.")
                         return
                     }
                     context.delete(meteoriteObject)
