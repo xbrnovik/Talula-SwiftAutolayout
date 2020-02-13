@@ -42,8 +42,8 @@ class DetailViewController: UIViewController {
         let longitude: CLLocationDegrees = meteorite.longitude
         let location = CLLocationCoordinate2DMake(latitude, longitude)
         let span = MKCoordinateSpan(
-            latitudeDelta: Constants.map.latitudeDelta,
-            longitudeDelta: Constants.map.longitudeDelta
+            latitudeDelta: Map.latitudeDelta,
+            longitudeDelta: Map.longitudeDelta
         )
         let region = MKCoordinateRegion(center: location, span: span)
         // Creates new annotation and set region.

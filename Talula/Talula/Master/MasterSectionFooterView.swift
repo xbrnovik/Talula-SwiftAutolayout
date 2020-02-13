@@ -22,7 +22,7 @@ class MasterSectionFooterView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
-        label.font = Constants.fonts.bodyFont
+        label.font = Font.bodyFont
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

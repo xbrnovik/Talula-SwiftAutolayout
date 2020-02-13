@@ -14,8 +14,8 @@ class InformationIconsStackView: UIStackView {
     let meteoriteATypeView: InformationBigRowView = {
         let view = InformationBigRowView()
         view.iconImageView.image = #imageLiteral(resourceName: "BigMeteorite")
-        let highMassNumber = Constants.meteoriteMass.highMassLevel as NSNumber
-        let highMassString = Constants.numberFormatters.localeRounded.string(from: highMassNumber)
+        let highMassNumber = Map.highMassLevel as NSNumber
+        let highMassString = Formatter.numberFormatter.localeRounded.string(from: highMassNumber)
         let highMassLevel = highMassString ?? "\(highMassNumber)"
         view.titleLabel.text = "This icon describes meteorites with mass value bigger than \(highMassLevel) g."
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -25,11 +25,11 @@ class InformationIconsStackView: UIStackView {
     let meteoriteBTypeView: InformationBigRowView = {
         let view = InformationBigRowView()
         view.iconImageView.image = #imageLiteral(resourceName: "SmaillMeteorite")
-        let lowMassNumber = Constants.meteoriteMass.lowMassLevel as NSNumber
-        let lowMassString = Constants.numberFormatters.localeRounded.string(from: lowMassNumber)
+        let lowMassNumber = Map.lowMassLevel as NSNumber
+        let lowMassString = Formatter.numberFormatter.localeRounded.string(from: lowMassNumber)
         let lowMassLevel = lowMassString ?? "\(lowMassNumber)"
-        let highMassNumber = Constants.meteoriteMass.highMassLevel as NSNumber
-        let highMassString = Constants.numberFormatters.localeRounded.string(from: highMassNumber)
+        let highMassNumber = Map.highMassLevel as NSNumber
+        let highMassString = Formatter.numberFormatter.localeRounded.string(from: highMassNumber)
         let highMassLevel = highMassString ?? "\(highMassNumber)"
         view.titleLabel.text = "This icon describes with mass value smaller than \(highMassLevel) g and bigger than \(lowMassLevel) g."
         view.translatesAutoresizingMaskIntoConstraints = false

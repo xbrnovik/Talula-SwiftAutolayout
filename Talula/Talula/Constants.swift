@@ -10,55 +10,57 @@ import Foundation
 import UIKit
 import MapKit
 
-struct Constants {
-    
-    struct ui {
-        static let masterReusableCellId: String = "masterCell"
-        static let bigMargin: CGFloat = 15
-        static let mediumMargin: CGFloat = 10
-        static let smallMargin: CGFloat = 5
-        static let iconSize: CGFloat = 50
-        static let miniIconSize: CGFloat = 30
-        static let bigCell: CGFloat = 80
-        static let smallCell: CGFloat = 40
-        static let footerHeight: CGFloat = 80
-    }
-    
-    struct map {
-        static let latitudeDelta: CLLocationDegrees = 10
-        static let longitudeDelta: CLLocationDegrees = 10
-    }
-    
-    struct error {
-        static let dataDomain = "dataError"
-        static let emptyReceivedData = 101
-        static let incorrectDataFormat = 102
-        static let syncFailure = 103
-        static let wrongURLFormat = 104
-    }
-    
-    struct coreData {
-        static let entityName: String = "Meteorite"
-        static let defaultDescriptorPropertyName: String = "mass"
-    }
-    
-    struct fonts {
-        static let titleFont = UIFont.preferredFont(forTextStyle: .headline)
-        static let bodyFont = UIFont.preferredFont(forTextStyle: .body)
-        static let subtitleFont = UIFont.preferredFont(forTextStyle: .footnote)
-    }
-    
-    struct dataSync {
-        static let taskName = "cz.meteorites.refresh"
-        static let timestampKey = "updateTimestamp"
-        static let updateDelay = 86400
-    }
-    
-    struct meteoriteMass {
-        static let highMassLevel = 10000
-        static let lowMassLevel = 1000
-    }
-    struct numberFormatters {
+enum UIMargin {
+    static let small: CGFloat = 5
+    static let medium: CGFloat = 10
+    static let big: CGFloat = 15
+}
+
+enum UIIconSize {
+    static let mini: CGFloat = 30
+    static let medium: CGFloat = 50
+}
+
+enum UICellSize {
+    static let small: CGFloat = 40
+    static let big: CGFloat = 80
+}
+
+enum Name {
+    static let entity = "Meteorite"
+    static let defaultDescriptorProperty = "mass"
+    static let task = "cz.meteorites.refresh"
+    static let masterReusableCell = "masterCell"
+    static let timestampKey = "updateTimestamp"
+}
+
+enum ErrorDomain {
+    static let dataDomain = "dataError"
+}
+
+enum ErrorCode {
+    static let emptyReceivedData = 101
+    static let incorrectDataFormat = 102
+    static let syncFailure = 103
+    static let wrongURLFormat = 104
+}
+
+enum Map {
+    static let latitudeDelta: CLLocationDegrees = 10
+    static let longitudeDelta: CLLocationDegrees = 10
+    static let highMassLevel: Int = 10000
+    static let lowMassLevel: Int = 1000
+    static let updateDelay: Int = 86400
+}
+
+enum Font {
+    static let titleFont = UIFont.preferredFont(forTextStyle: .headline)
+    static let bodyFont = UIFont.preferredFont(forTextStyle: .body)
+    static let subtitleFont = UIFont.preferredFont(forTextStyle: .footnote)
+}
+
+struct Formatter {
+    struct numberFormatter {
         static let localeDecimal: NumberFormatter = {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
@@ -77,12 +79,11 @@ struct Constants {
         }()
     }
     
-    struct dateFormatters {
+    struct dateFormatter {
         static let iso: DateFormatter = {
             let formatter = DateFormatter()
             formatter.dateFormat = "YYYY-MM-dd'T'HH:mm:ss.SSS"
             return formatter
         }()
     }
-    
 }

@@ -26,7 +26,7 @@ struct MeteoriteResponse: Decodable {
             let lat = Double(try container.decode(String.self, forKey: .latitude)),
             let long = Double(try container.decode(String.self, forKey: .longitude))
         else {
-            throw NSError(domain: Constants.error.dataDomain, code: Constants.error.incorrectDataFormat, userInfo: nil)
+            throw NSError(domain: ErrorDomain.dataDomain, code: ErrorCode.incorrectDataFormat, userInfo: nil)
         }
         meteoriteId = try container.decode(String.self, forKey: .meteoriteId)
         latitude = lat

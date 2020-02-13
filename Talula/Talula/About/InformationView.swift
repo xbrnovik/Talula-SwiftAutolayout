@@ -137,29 +137,29 @@ class InformationView: BaseView {
                 innerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
                 // descriptionAppLabel
                 descriptionAppLabel.topAnchor.constraint(equalTo: innerView.topAnchor, constant: 20),
-                descriptionAppLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                descriptionAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                descriptionAppLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: UIMargin.big),
+                descriptionAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -UIMargin.big),
                 // iconsDescriptionStackView
-                iconsDescriptionStackView.topAnchor.constraint(equalTo: descriptionAppLabel.bottomAnchor, constant: Constants.ui.bigMargin),
-                iconsDescriptionStackView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                iconsDescriptionStackView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                iconsDescriptionStackView.topAnchor.constraint(equalTo: descriptionAppLabel.bottomAnchor, constant: UIMargin.big),
+                iconsDescriptionStackView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: UIMargin.big),
+                iconsDescriptionStackView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -UIMargin.big),
                 // autorAppLabel
-                autorAppLabel.topAnchor.constraint(equalTo: iconsDescriptionStackView.bottomAnchor, constant: Constants.ui.bigMargin),
-                autorAppLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                autorAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                autorAppLabel.topAnchor.constraint(equalTo: iconsDescriptionStackView.bottomAnchor, constant: UIMargin.big),
+                autorAppLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: UIMargin.big),
+                autorAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -UIMargin.big),
                 // contactStackView
-                contactStackView.topAnchor.constraint(equalTo: autorAppLabel.bottomAnchor, constant: Constants.ui.bigMargin),
-                contactStackView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                contactStackView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                contactStackView.topAnchor.constraint(equalTo: autorAppLabel.bottomAnchor, constant: UIMargin.big),
+                contactStackView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: UIMargin.big),
+                contactStackView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -UIMargin.big),
                 // licenseHeadlineLabel
-                licenseHeadlineLabel.topAnchor.constraint(equalTo: contactStackView.bottomAnchor, constant: Constants.ui.bigMargin),
-                licenseHeadlineLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                licenseHeadlineLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                licenseHeadlineLabel.topAnchor.constraint(equalTo: contactStackView.bottomAnchor, constant: UIMargin.big),
+                licenseHeadlineLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: UIMargin.big),
+                licenseHeadlineLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -UIMargin.big),
                 // licenseBodyTextView
-                licenseBodyTextView.topAnchor.constraint(equalTo: licenseHeadlineLabel.bottomAnchor, constant: Constants.ui.mediumMargin),
-                licenseBodyTextView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                licenseBodyTextView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
-                licenseBodyTextView.bottomAnchor.constraint(equalTo: innerView.bottomAnchor, constant: -Constants.ui.bigMargin)
+                licenseBodyTextView.topAnchor.constraint(equalTo: licenseHeadlineLabel.bottomAnchor, constant: UIMargin.big),
+                licenseBodyTextView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: UIMargin.big),
+                licenseBodyTextView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -UIMargin.big),
+                licenseBodyTextView.bottomAnchor.constraint(equalTo: innerView.bottomAnchor, constant: -UIMargin.big)
             ])
             
             didSetupConstraints = true

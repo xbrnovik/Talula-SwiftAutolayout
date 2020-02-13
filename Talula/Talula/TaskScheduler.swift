@@ -16,7 +16,7 @@ class TaskScheduler {
     
     /// Registrates app refresh task. (App assumes small amount of data and uses BGAppRefreshTask. For larger amount of data BGProcessingTaskRequest would be more suitable.)
     func registerTask() {
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: Constants.dataSync.taskName, using: nil) { [weak self] task in
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: Name.task.self, using: nil) { [weak self] task in
             guard let task = task as? BGAppRefreshTask else {
                 NSLog("Task is not type of BGAppRefreshTask")
                 return
@@ -27,8 +27,8 @@ class TaskScheduler {
     
     /// Schedules next call of background app refresh task.
     func scheduleAppRefresh() {
-        let request = BGAppRefreshTaskRequest(identifier: Constants.dataSync.taskName)
-        request.earliestBeginDate = Date(timeIntervalSinceNow: TimeInterval(Constants.dataSync.updateDelay))
+        let request = BGAppRefreshTaskRequest(identifier: Name.task)
+        request.earliestBeginDate = Date(timeIntervalSinceNow: TimeInterval(Map.updateDelay))
         do {
             try BGTaskScheduler.shared.submit(request)
         } catch {

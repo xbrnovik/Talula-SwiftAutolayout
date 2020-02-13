@@ -15,7 +15,7 @@ class MasterViewController: UIViewController {
     let masterView: MasterView = {
         let view = MasterView()
         view.backgroundColor = UIColor.white
-        view.listView.register(MasterCell.self, forCellReuseIdentifier: Constants.ui.masterReusableCellId)
+        view.listView.register(MasterCell.self, forCellReuseIdentifier: Name.masterReusableCell)
         return view
     }()
     

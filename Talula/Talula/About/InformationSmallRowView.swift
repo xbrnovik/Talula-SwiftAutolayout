@@ -45,15 +45,15 @@ class InformationSmallRowView: BaseView {
         if (!didSetupConstraints) {
             
             NSLayoutConstraint.activate([
-                heightAnchor.constraint(equalToConstant: Constants.ui.smallCell),
+                heightAnchor.constraint(equalToConstant: UICellSize.small),
                 // iconImageView
-                iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.ui.smallMargin),
-                iconImageView.heightAnchor.constraint(equalToConstant: Constants.ui.miniIconSize),
-                iconImageView.widthAnchor.constraint(equalToConstant: Constants.ui.miniIconSize),
+                iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIMargin.small),
+                iconImageView.heightAnchor.constraint(equalToConstant: UIIconSize.mini),
+                iconImageView.widthAnchor.constraint(equalToConstant: UIIconSize.mini),
                 iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
                 // titleLabel
-                titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: Constants.ui.bigMargin),
-                titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.ui.bigMargin),
+                titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: UIMargin.big),
+                titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -UIMargin.big),
                 titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
             ])
             

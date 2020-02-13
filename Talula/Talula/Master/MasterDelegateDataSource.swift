@@ -36,12 +36,12 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell()
         let meteorite = meteoritesFRC.object(at: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ui.masterReusableCellId) as? MasterCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Name.masterReusableCell) as? MasterCell
         cell?.titleLabel.text = meteorite.name ?? "Unknown name"
         
         if
         let massNumber = (round(1000 * meteorite.mass) / 1000) as NSNumber?,
-        let massString = Constants.numberFormatters.localeDecimal.string(from: massNumber),
+        let massString = Formatter.numberFormatter.localeDecimal.string(from: massNumber),
         massNumber != 0 {
             
             cell?.subTitleLabel.text = "\(massString) g"
@@ -65,7 +65,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Constants.ui.bigCell
+        return UICellSize.big
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,7 +78,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     
     /// Sets footer view by the count of meteorites.
     func displayFooterView(_ tableView: UITableView) {
-        let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: Constants.ui.footerHeight)
+        let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UICellSize.big)
         let footer = MasterSectionFooterView(frame: frame)
         if let count = meteoritesFRC.fetchedObjects?.count {
             let text = count == 1 ? "\(count) meteorite" : "\(count) meteorites"

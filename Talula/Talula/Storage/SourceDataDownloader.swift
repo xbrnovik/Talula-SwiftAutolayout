@@ -21,9 +21,9 @@ class SourceDataDownloader {
         components.path = "/resource/y77d-th95.json"
         var urlWhere = "year>=\"2011-01-01T00:00:00\""
         if !downloadAll {
-            let lastUpdateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
+            let lastUpdateTimestamp = UserDefaults.standard.integer(forKey: Name.timestampKey)
             let lastUpdateDate = Date.init(timeIntervalSince1970: TimeInterval(lastUpdateTimestamp))
-            let dateString = Constants.dateFormatters.iso.string(from: lastUpdateDate)
+            let dateString = Formatter.dateFormatter.iso.string(from: lastUpdateDate)
             urlWhere = "year>=\"2011-01-01T00:00:00\"AND:updated_at>\"" + dateString + "Z\""
         }
         components.queryItems = [
@@ -46,7 +46,7 @@ class SourceDataDownloader {
         self.downloadAll = all
         // Checks is defined URL of session.
         guard let meteoritesURL = meteoriteURL else {
-            let error = NSError(domain: Constants.error.dataDomain, code: Constants.error.wrongURLFormat, userInfo: nil)
+            let error = NSError(domain: ErrorDomain.dataDomain, code: ErrorCode.wrongURLFormat, userInfo: nil)
             completion(nil, error)
             return
         }
@@ -54,7 +54,7 @@ class SourceDataDownloader {
         urlSession.dataTask(with: meteoritesURL) { (data, response, error) in
             // Checks if received data exists.
             guard let data = data else {
-                let error = NSError(domain: Constants.error.dataDomain, code: Constants.error.emptyReceivedData, userInfo: nil)
+                let error = NSError(domain: ErrorDomain.dataDomain, code: ErrorCode.emptyReceivedData, userInfo: nil)
                 completion(nil, error)
                 return
             }

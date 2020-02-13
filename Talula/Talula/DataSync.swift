@@ -17,10 +17,10 @@ class DataSync {
     var needsUpdateData: Bool {
         var result = true
         // If updateTimestamp is not set, UserDefaults return 0.
-        let updateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
+        let updateTimestamp = UserDefaults.standard.integer(forKey: Name.timestampKey)
         let currentTimestamp = Int(Date().timeIntervalSince1970)
         // Adds to calculation one day difference (24*60*60 = 86400 seconds).
-        let calculatedTimestamp = updateTimestamp + Constants.dataSync.updateDelay
+        let calculatedTimestamp = updateTimestamp + Map.updateDelay
         if calculatedTimestamp >= currentTimestamp {
             result = false
         }
@@ -31,7 +31,7 @@ class DataSync {
     var needsDownloadAllData: Bool {
         var result = false
         // If updateTimestamp is not set, UserDefaults return 0.
-        let updateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
+        let updateTimestamp = UserDefaults.standard.integer(forKey: Name.timestampKey)
         if updateTimestamp == 0 {
             result = true
         }
@@ -73,7 +73,7 @@ class DataSync {
     /// Sets when was last successfull update (sync) of meteorites.
     private func setLastUpdated() {
         let timestamp = Int(Date().timeIntervalSince1970)
-        UserDefaults.standard.set(timestamp, forKey: Constants.dataSync.timestampKey)
+        UserDefaults.standard.set(timestamp, forKey: Name.timestampKey)
     }
     
 }

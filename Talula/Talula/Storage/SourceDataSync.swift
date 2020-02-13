@@ -33,7 +33,7 @@ class SourceDataSync {
             }
             // Checks if data are obtained.
             guard let data = data else {
-                let error = NSError(domain: Constants.error.dataDomain, code: Constants.error.incorrectDataFormat, userInfo: nil)
+                let error = NSError(domain: ErrorDomain.dataDomain, code: ErrorCode.incorrectDataFormat, userInfo: nil)
                 completion(error)
                 return
             }
@@ -47,7 +47,7 @@ class SourceDataSync {
             if accepted {
                 completion(nil)
             } else {
-                let error = NSError(domain: Constants.error.dataDomain, code: Constants.error.syncFailure, userInfo: nil)
+                let error = NSError(domain: ErrorDomain.dataDomain, code: ErrorCode.syncFailure, userInfo: nil)
                 completion(error)
             }
         }

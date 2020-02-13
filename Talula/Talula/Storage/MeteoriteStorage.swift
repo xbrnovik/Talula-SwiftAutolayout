@@ -20,9 +20,9 @@ class MeteoriteStorage {
         self.managedObjectContext = CoreDataContainer.shared.persistentContainer.viewContext
         // To fill cache is necessary first of all get saved data.
         let fetchRequest: NSFetchRequest<Meteorite> = NSFetchRequest()
-        let entity = NSEntityDescription.entity(forEntityName: Constants.coreData.entityName, in: self.managedObjectContext)
+        let entity = NSEntityDescription.entity(forEntityName: Name.entity, in: self.managedObjectContext)
         fetchRequest.entity = entity
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: Constants.coreData.defaultDescriptorPropertyName, ascending: false)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: Name.defaultDescriptorProperty, ascending: false)]
         let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         aFetchedResultsController.delegate = delegate
         do {
@@ -58,9 +58,9 @@ class MeteoriteStorage {
      - Returns: Meteorite object with given id.
      */
     func getById(id: String) -> Meteorite? {
-        let matchingMeteoriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.coreData.entityName)
+        let matchingMeteoriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Name.entity)
         matchingMeteoriteRequest.predicate = NSPredicate(format: "meteoriteId = %@", id)
-        matchingMeteoriteRequest.sortDescriptors = [NSSortDescriptor(key: Constants.coreData.defaultDescriptorPropertyName, ascending: false)]
+        matchingMeteoriteRequest.sortDescriptors = [NSSortDescriptor(key: Name.defaultDescriptorProperty, ascending: false)]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: matchingMeteoriteRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         do {
             try fetchedResultsController.performFetch()
@@ -77,7 +77,7 @@ class MeteoriteStorage {
      - Returns: A new meteorite object.
      */
     func create() -> Meteorite? {
-        return NSEntityDescription.insertNewObject(forEntityName: Constants.coreData.entityName, into: managedObjectContext) as? Meteorite // new objects
+        return NSEntityDescription.insertNewObject(forEntityName: Name.entity, into: managedObjectContext) as? Meteorite // new objects
     }
     
     /// Saves changes to managed object context.
