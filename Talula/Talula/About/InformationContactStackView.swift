@@ -16,6 +16,7 @@ class InformationContactStackView: UIStackView {
         view.iconImageView.image = #imageLiteral(resourceName: "InformationGmail")
         view.titleLabel.text = "dia.brnovikova@gmail.com"
         view.titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -24,6 +25,7 @@ class InformationContactStackView: UIStackView {
         view.iconImageView.image = #imageLiteral(resourceName: "InformationLinkedIn")
         view.titleLabel.text = "Diana Brnovik"
         view.titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -38,8 +40,6 @@ class InformationContactStackView: UIStackView {
         self.backgroundColor = .white
         self.addArrangedSubview(gmailView)
         self.addArrangedSubview(linkedInView)
-        gmailView.translatesAutoresizingMaskIntoConstraints = false
-        linkedInView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init(coder: NSCoder) {

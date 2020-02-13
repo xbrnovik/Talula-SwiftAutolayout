@@ -17,6 +17,7 @@ class MasterCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "OtherMeteorite")
         imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
         
@@ -28,6 +29,7 @@ class MasterCell: UITableViewCell {
         label.numberOfLines = 1
         label.font = Constants.fonts.titleFont
         label.text = "Meteorite"
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -39,6 +41,7 @@ class MasterCell: UITableViewCell {
         label.numberOfLines = 1
         label.font = Constants.fonts.subtitleFont
         label.text = "Mass"
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -57,24 +60,18 @@ class MasterCell: UITableViewCell {
     override func updateConstraints() {
         
         if (!didSetupConstraints) {
-            iconImageView.translatesAutoresizingMaskIntoConstraints = false
-            titleLabel.translatesAutoresizingMaskIntoConstraints = false
-            subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
+                // iconImageView
                 iconImageView.widthAnchor.constraint(equalToConstant: Constants.ui.iconSize),
                 iconImageView.heightAnchor.constraint(equalToConstant: Constants.ui.iconSize),
                 iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.ui.bigMargin+5),
-                iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ])
-
-            NSLayoutConstraint.activate([
+                iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+                // titleLabel
                 titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Constants.ui.bigMargin+5),
                 titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: Constants.ui.mediumMargin),
-                titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.ui.bigMargin)
-            ])
-
-            NSLayoutConstraint.activate([
+                titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.ui.bigMargin),
+                // subTitleLabel
                 subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.ui.smallMargin),
                 subTitleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: Constants.ui.mediumMargin),
                 subTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.ui.bigMargin)
@@ -87,5 +84,4 @@ class MasterCell: UITableViewCell {
         super.updateConstraints()
         
     }
-    
 }

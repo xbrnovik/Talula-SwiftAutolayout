@@ -43,18 +43,15 @@ class MasterSectionFooterView: UIView {
         
         if (!didSetupConstraints) {
 
-            self.backgroundColor = UIColor.white
-            separatorView.translatesAutoresizingMaskIntoConstraints = false
-            titleLabel.translatesAutoresizingMaskIntoConstraints = false
+            backgroundColor = UIColor.white
 
             NSLayoutConstraint.activate([
+                // separatorView
                 separatorView.leadingAnchor.constraint(equalTo: leadingAnchor),
                 separatorView.trailingAnchor.constraint(equalTo: trailingAnchor),
                 separatorView.topAnchor.constraint(equalTo: topAnchor),
-                separatorView.heightAnchor.constraint(equalToConstant: 2)
-            ])
-
-            NSLayoutConstraint.activate([
+                separatorView.heightAnchor.constraint(equalToConstant: 2),
+                // titleLabel
                 titleLabel.topAnchor.constraint(equalTo: separatorView.topAnchor, constant: 10),
                 titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
                 titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor)

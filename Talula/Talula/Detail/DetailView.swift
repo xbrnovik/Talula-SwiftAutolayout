@@ -42,19 +42,17 @@ class DetailView: BaseView {
     }
     
     override func updateConstraints() {
-        
         scaleView.mapView = mapView
         
         if (!didSetupConstraints) {
             
             NSLayoutConstraint.activate([
+                // mapView
                 mapView.leadingAnchor.constraint(equalTo: leadingAnchor),
                 mapView.trailingAnchor.constraint(equalTo: trailingAnchor),
                 mapView.topAnchor.constraint(equalTo: topAnchor),
-                mapView.bottomAnchor.constraint(equalTo: bottomAnchor)
-            ])
-            
-            NSLayoutConstraint.activate([
+                mapView.bottomAnchor.constraint(equalTo: bottomAnchor),
+                // scaleView
                 scaleView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -45),
                 scaleView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
                 scaleView.heightAnchor.constraint(equalToConstant: 25)

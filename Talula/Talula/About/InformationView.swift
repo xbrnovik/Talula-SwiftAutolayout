@@ -16,6 +16,7 @@ class InformationView: BaseView {
     let outerView: UIView = {
         let view = UIView()
         view.isUserInteractionEnabled = true
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -29,12 +30,14 @@ class InformationView: BaseView {
         scrollView.showsVerticalScrollIndicator = true
         scrollView.scrollsToTop = false
         scrollView.setContentOffset(.zero, animated: false)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
     
     let innerView: UIView = {
         let view = UIView()
         view.isUserInteractionEnabled = true
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -45,11 +48,13 @@ class InformationView: BaseView {
         label.adjustsFontSizeToFitWidth = false
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let iconsDescriptionStackView: InformationIconsStackView = {
         let view = InformationIconsStackView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -60,11 +65,13 @@ class InformationView: BaseView {
         label.adjustsFontSizeToFitWidth = false
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let contactStackView: InformationContactStackView = {
         let view = InformationContactStackView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -72,6 +79,7 @@ class InformationView: BaseView {
         let label = UILabel()
         label.text = "Icons"
         label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -84,6 +92,7 @@ class InformationView: BaseView {
         view.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         view.textContainer.lineFragmentPadding = 0
         view.isScrollEnabled = false
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -100,17 +109,6 @@ class InformationView: BaseView {
         innerView.addSubview(contactStackView)
         innerView.addSubview(licenseHeadlineLabel)
         innerView.addSubview(licenseBodyTextView)
-        
-        outerView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        innerView.translatesAutoresizingMaskIntoConstraints = false
-        
-        descriptionAppLabel.translatesAutoresizingMaskIntoConstraints = false
-        iconsDescriptionStackView.translatesAutoresizingMaskIntoConstraints = false
-        autorAppLabel.translatesAutoresizingMaskIntoConstraints = false
-        contactStackView.translatesAutoresizingMaskIntoConstraints = false
-        licenseHeadlineLabel.translatesAutoresizingMaskIntoConstraints = false
-        licenseBodyTextView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -122,57 +120,42 @@ class InformationView: BaseView {
         if (!didSetupConstraints) {
             
             NSLayoutConstraint.activate([
+                // outerView
                 outerView.leadingAnchor.constraint(equalTo: leadingAnchor),
                 outerView.trailingAnchor.constraint(equalTo: trailingAnchor),
                 outerView.topAnchor.constraint(equalTo: topAnchor),
-                outerView.bottomAnchor.constraint(equalTo: bottomAnchor)
-            ])
-            
-            NSLayoutConstraint.activate([
+                outerView.bottomAnchor.constraint(equalTo: bottomAnchor),
+                // scrollView
                 scrollView.leadingAnchor.constraint(equalTo: outerView.leadingAnchor),
                 scrollView.trailingAnchor.constraint(equalTo: outerView.trailingAnchor),
                 scrollView.topAnchor.constraint(equalTo: outerView.topAnchor),
-                scrollView.bottomAnchor.constraint(equalTo: outerView.bottomAnchor)
-            ])
-            
-            NSLayoutConstraint.activate([
+                scrollView.bottomAnchor.constraint(equalTo: outerView.bottomAnchor),
+                // innerView
                 innerView.leadingAnchor.constraint(equalTo: outerView.leadingAnchor),
                 innerView.trailingAnchor.constraint(equalTo: outerView.trailingAnchor),
                 innerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-                innerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
-            ])
-            
-            NSLayoutConstraint.activate([
+                innerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+                // descriptionAppLabel
                 descriptionAppLabel.topAnchor.constraint(equalTo: innerView.topAnchor, constant: 20),
                 descriptionAppLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                descriptionAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin)
-            ])
-            
-            NSLayoutConstraint.activate([
+                descriptionAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                // iconsDescriptionStackView
                 iconsDescriptionStackView.topAnchor.constraint(equalTo: descriptionAppLabel.bottomAnchor, constant: Constants.ui.bigMargin),
                 iconsDescriptionStackView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                iconsDescriptionStackView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin)
-            ])
-            
-            NSLayoutConstraint.activate([
+                iconsDescriptionStackView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                // autorAppLabel
                 autorAppLabel.topAnchor.constraint(equalTo: iconsDescriptionStackView.bottomAnchor, constant: Constants.ui.bigMargin),
                 autorAppLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                autorAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin)
-            ])
-            
-            NSLayoutConstraint.activate([
+                autorAppLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                // contactStackView
                 contactStackView.topAnchor.constraint(equalTo: autorAppLabel.bottomAnchor, constant: Constants.ui.bigMargin),
                 contactStackView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                contactStackView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin)
-            ])
-            
-            NSLayoutConstraint.activate([
+                contactStackView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                // licenseHeadlineLabel
                 licenseHeadlineLabel.topAnchor.constraint(equalTo: contactStackView.bottomAnchor, constant: Constants.ui.bigMargin),
                 licenseHeadlineLabel.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
-                licenseHeadlineLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin)
-            ])
-            
-            NSLayoutConstraint.activate([
+                licenseHeadlineLabel.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),
+                // licenseBodyTextView
                 licenseBodyTextView.topAnchor.constraint(equalTo: licenseHeadlineLabel.bottomAnchor, constant: Constants.ui.mediumMargin),
                 licenseBodyTextView.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: Constants.ui.bigMargin),
                 licenseBodyTextView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -Constants.ui.bigMargin),

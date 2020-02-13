@@ -17,12 +17,14 @@ class InformationSmallRowView: BaseView {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "InformationGmail")
         imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     let titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -32,8 +34,6 @@ class InformationSmallRowView: BaseView {
         self.backgroundColor = .white
         self.view.addSubview(titleLabel)
         self.view.addSubview(iconImageView)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        iconImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -45,17 +45,13 @@ class InformationSmallRowView: BaseView {
         if (!didSetupConstraints) {
             
             NSLayoutConstraint.activate([
-                self.heightAnchor.constraint(equalToConstant: Constants.ui.smallCell)
-            ])
-            
-            NSLayoutConstraint.activate([
+                heightAnchor.constraint(equalToConstant: Constants.ui.smallCell),
+                // iconImageView
                 iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.ui.smallMargin),
                 iconImageView.heightAnchor.constraint(equalToConstant: Constants.ui.miniIconSize),
                 iconImageView.widthAnchor.constraint(equalToConstant: Constants.ui.miniIconSize),
-                iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ])
-            
-            NSLayoutConstraint.activate([
+                iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+                // titleLabel
                 titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: Constants.ui.bigMargin),
                 titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.ui.bigMargin),
                 titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)

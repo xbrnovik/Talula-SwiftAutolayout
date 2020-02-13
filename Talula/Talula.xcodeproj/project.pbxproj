@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		23FF739523F4460000EDD5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF739423F4460000EDD5AC /* AppDelegate.swift */; };
 		23FF739723F4460000EDD5AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF739623F4460000EDD5AC /* SceneDelegate.swift */; };
-		23FF739923F4460000EDD5AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF739823F4460000EDD5AC /* ViewController.swift */; };
-		23FF739C23F4460000EDD5AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FF739A23F4460000EDD5AC /* Main.storyboard */; };
 		23FF73A423F4460200EDD5AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FF73A223F4460200EDD5AC /* LaunchScreen.storyboard */; };
 		23FF73AF23F4460200EDD5AC /* TalulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73AE23F4460200EDD5AC /* TalulaTests.swift */; };
 		23FF73DA23F446B400EDD5AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73BA23F446B300EDD5AC /* Constants.swift */; };
@@ -57,8 +55,6 @@
 		23FF739123F4460000EDD5AC /* Talula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FF739423F4460000EDD5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23FF739623F4460000EDD5AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23FF739823F4460000EDD5AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		23FF739B23F4460000EDD5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23FF73A323F4460200EDD5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23FF73A523F4460200EDD5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23FF73AA23F4460200EDD5AC /* TalulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,8 +131,7 @@
 			children = (
 				23FF739423F4460000EDD5AC /* AppDelegate.swift */,
 				23FF739623F4460000EDD5AC /* SceneDelegate.swift */,
-				23FF739823F4460000EDD5AC /* ViewController.swift */,
-				23FF73BB23F446B300EDD5AC /* About */,
+				23FF73D823F446B400EDD5AC /* TaskScheduler.swift */,
 				23FF73D423F446B300EDD5AC /* AppStarter.swift */,
 				23FF73F923F4504D00EDD5AC /* Assets.xcassets */,
 				23FF73BA23F446B300EDD5AC /* Constants.swift */,
@@ -144,11 +139,10 @@
 				23FF73D523F446B300EDD5AC /* DataRefreshOperation.swift */,
 				23FF73F723F44BFE00EDD5AC /* BaseView.swift */,
 				23FF73D723F446B400EDD5AC /* DataSync.swift */,
+				23FF73BB23F446B300EDD5AC /* About */,
 				23FF73D123F446B300EDD5AC /* Detail */,
 				23FF73C223F446B300EDD5AC /* Master */,
 				23FF73C823F446B300EDD5AC /* Storage */,
-				23FF73D823F446B400EDD5AC /* TaskScheduler.swift */,
-				23FF739A23F4460000EDD5AC /* Main.storyboard */,
 				23FF73A223F4460200EDD5AC /* LaunchScreen.storyboard */,
 				23FF73A523F4460200EDD5AC /* Info.plist */,
 			);
@@ -295,7 +289,6 @@
 			files = (
 				23FF73A423F4460200EDD5AC /* LaunchScreen.storyboard in Resources */,
 				23FF73FA23F4504D00EDD5AC /* Assets.xcassets in Resources */,
-				23FF739C23F4460000EDD5AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23FF739923F4460000EDD5AC /* ViewController.swift in Sources */,
 				23FF739523F4460000EDD5AC /* AppDelegate.swift in Sources */,
 				23FF73E223F446B400EDD5AC /* MasterView.swift in Sources */,
 				23FF73E723F446B400EDD5AC /* Talula.xcdatamodeld in Sources */,
@@ -365,14 +357,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		23FF739A23F4460000EDD5AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23FF739B23F4460000EDD5AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		23FF73A223F4460200EDD5AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -17,6 +17,7 @@ class InformationBigRowView: BaseView {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "BigMeteorite")
         imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -25,6 +26,7 @@ class InformationBigRowView: BaseView {
         label.adjustsFontSizeToFitWidth = false
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
@@ -34,8 +36,6 @@ class InformationBigRowView: BaseView {
         self.backgroundColor = .white
         self.view.addSubview(titleLabel)
         self.view.addSubview(iconImageView)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        iconImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,17 +47,13 @@ class InformationBigRowView: BaseView {
         if (!didSetupConstraints) {
                         
             NSLayoutConstraint.activate([
-                self.heightAnchor.constraint(equalToConstant: Constants.ui.bigCell)
-            ])
-            
-            NSLayoutConstraint.activate([
+                heightAnchor.constraint(equalToConstant: Constants.ui.bigCell),
+                // iconImageView
                 iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.ui.bigMargin),
                 iconImageView.heightAnchor.constraint(equalToConstant: Constants.ui.iconSize),
                 iconImageView.widthAnchor.constraint(equalToConstant: Constants.ui.iconSize),
-                iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ])
-            
-            NSLayoutConstraint.activate([
+                iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+                // titleLabel
                 titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: Constants.ui.bigMargin),
                 titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.ui.bigMargin),
                 titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)

@@ -18,6 +18,7 @@ class InformationIconsStackView: UIStackView {
         let highMassString = Constants.numberFormatters.localeRounded.string(from: highMassNumber)
         let highMassLevel = highMassString ?? "\(highMassNumber)"
         view.titleLabel.text = "This icon describes meteorites with mass value bigger than \(highMassLevel) g."
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -31,6 +32,7 @@ class InformationIconsStackView: UIStackView {
         let highMassString = Constants.numberFormatters.localeRounded.string(from: highMassNumber)
         let highMassLevel = highMassString ?? "\(highMassNumber)"
         view.titleLabel.text = "This icon describes with mass value smaller than \(highMassLevel) g and bigger than \(lowMassLevel) g."
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -38,6 +40,7 @@ class InformationIconsStackView: UIStackView {
         let view = InformationBigRowView()
         view.iconImageView.image = #imageLiteral(resourceName: "OtherMeteorite")
         view.titleLabel.text = "This icon describes other types of meteorites."
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -53,9 +56,6 @@ class InformationIconsStackView: UIStackView {
         self.addArrangedSubview(meteoriteATypeView)
         self.addArrangedSubview(meteoriteBTypeView)
         self.addArrangedSubview(meteoriteCTypeView)
-        meteoriteATypeView.translatesAutoresizingMaskIntoConstraints = false
-        meteoriteBTypeView.translatesAutoresizingMaskIntoConstraints = false
-        meteoriteCTypeView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init(coder: NSCoder) {
