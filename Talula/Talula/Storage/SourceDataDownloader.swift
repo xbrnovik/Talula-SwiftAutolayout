@@ -19,7 +19,7 @@ class SourceDataDownloader {
              - all: Information saying if all data should be download.
              - completion: Completion with obtained data or obtained error.
      */
-    func getMeteorites(all: Bool, completion: @escaping(_ meteoritesDict: [[String: Any]]?, _ error: Error?) -> ()) {
+    func getMeteorites(all: Bool, completion: @escaping(_ meteoritesDict: [MeteoriteResponse]?, _ error: Error?) -> ()) {
         // Creates meteorite URL.
         let lastUpdateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
         let lastUpdateDate = Date.init(timeIntervalSince1970: TimeInterval(lastUpdateTimestamp))
@@ -43,13 +43,10 @@ class SourceDataDownloader {
                 completion(nil, error)
                 return
             }
-            // Serializes received data.
+            // Decodes received data.
             do {
-                let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-                guard let jsonDictionary = jsonObject as? [[String: Any]] else {
-                    throw NSError(domain: Constants.error.dataDomain, code: Constants.error.incorrectDataFormat, userInfo: nil)
-                }
-                completion(jsonDictionary, nil)
+                let jsonObject = try JSONDecoder().decode([MeteoriteResponse].self, from: data)
+                completion(jsonObject, nil)
             } catch {
                 completion(nil, error)
             }

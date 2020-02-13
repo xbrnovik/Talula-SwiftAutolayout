@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23A55F8823F592C20055991A /* MeteoriteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A55F8723F592C20055991A /* MeteoriteResponse.swift */; };
 		23FF739523F4460000EDD5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF739423F4460000EDD5AC /* AppDelegate.swift */; };
 		23FF739723F4460000EDD5AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF739623F4460000EDD5AC /* SceneDelegate.swift */; };
 		23FF73A423F4460200EDD5AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FF73A223F4460200EDD5AC /* LaunchScreen.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23A55F8723F592C20055991A /* MeteoriteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoriteResponse.swift; sourceTree = "<group>"; };
 		23FF739123F4460000EDD5AC /* Talula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FF739423F4460000EDD5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23FF739623F4460000EDD5AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				23FF73CE23F446B300EDD5AC /* MeteoriteStorage.swift */,
 				23FF73CF23F446B300EDD5AC /* Meteorite+CoreDataClass.swift */,
 				23FF73D023F446B300EDD5AC /* MeteoriteDataURLFactory.swift */,
+				23A55F8723F592C20055991A /* MeteoriteResponse.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				23FF73E723F446B400EDD5AC /* Talula.xcdatamodeld in Sources */,
 				23FF73DE23F446B400EDD5AC /* InformationBigRowView.swift in Sources */,
 				23FF73F123F446B400EDD5AC /* CoreDataContainer.swift in Sources */,
+				23A55F8823F592C20055991A /* MeteoriteResponse.swift in Sources */,
 				23FF73E623F446B400EDD5AC /* SourceDataDownloader.swift in Sources */,
 				23FF73F023F446B400EDD5AC /* DataRefreshOperation.swift in Sources */,
 				23FF73E823F446B400EDD5AC /* SourceDataSync.swift in Sources */,

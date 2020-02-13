@@ -11,15 +11,8 @@ import CoreData
 
 class SourceDataSync {
     
-    private let persistentContainer: NSPersistentContainer
-    private let downloader: SourceDataDownloader
-    
-    // MARK: - Init
-    
-    init() {
-        self.persistentContainer = CoreDataContainer.shared.persistentContainer
-        self.downloader = SourceDataDownloader()
-    }
+    private let persistentContainer: NSPersistentContainer = CoreDataContainer.shared.persistentContainer
+    private let downloader: SourceDataDownloader = SourceDataDownloader()
     
     // MARK: - Fetch
     
@@ -32,14 +25,14 @@ class SourceDataSync {
      - Parameter all: Information saying if all data is neccessary to download.
      */
     func fetchMeteorites(all: Bool, completion: @escaping(Error?) -> Void) {
-        downloader.getMeteorites(all: all) { dataDictionary, error in
+        downloader.getMeteorites(all: all) { data, error in
             // Checks if is error a result, if true then returns.
             if let error = error {
                 completion(error)
                 return
             }
             // Checks if data are obtained.
-            guard let dataDictionary = dataDictionary else {
+            guard let data = data else {
                 let error = NSError(domain: Constants.error.dataDomain, code: Constants.error.incorrectDataFormat, userInfo: nil)
                 completion(error)
                 return
@@ -49,7 +42,7 @@ class SourceDataSync {
             context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
             context.undoManager = nil
             // Updates persistent data.
-            let accepted = self.syncMeteorites(dataDictionary: dataDictionary, context: context)
+            let accepted = self.syncMeteorites(meteorites: data, context: context)
             // If update was not successful returns error.
             if accepted {
                 completion(nil)
@@ -70,35 +63,26 @@ class SourceDataSync {
      
      - Returns: Information about success of update in persistent storage.
      */
-    private func syncMeteorites(dataDictionary: [[String: Any]], context: NSManagedObjectContext) -> Bool {
+    private func syncMeteorites(meteorites: [MeteoriteResponse], context: NSManagedObjectContext) -> Bool {
         var successfull = false
         let storage = MeteoriteStorage()
         storage.setExternalContext(context: context)
         // Performs update.
         context.performAndWait {
-            // Loops on meteorites.
-            for meteoriteDictionary in dataDictionary { //new data
-                // Meteorite definition.
-                let meteorite: Meteorite?
-                let id = meteoriteDictionary["id"] as! String
-                // Gets meteorite.
-                if let meteoriteObject = storage.getById(id: id) {
-                    // Gets existing object.
-                    meteorite = meteoriteObject
-                } else {
-                    // Creates a new object.
-                    meteorite = storage.create()
-                }
-                // Saves updates.
+            meteorites.forEach {
+                let id = $0.meteoriteId
+                let meteoriteObject = storage.getById(id: id) ?? storage.create()
                 do {
-                    try meteorite?.update(with: meteoriteDictionary) //set properties
-                } catch let error as NSError{
+                    try meteoriteObject?.update(with: $0) //set properties
+                } catch let error as NSError {
                     NSLog("Update error: \(error.debugDescription).")
-                    context.delete(meteorite!)
+                    guard let meteoriteObject = meteoriteObject else {
+                        NSLog("")
+                        return
+                    }
+                    context.delete(meteoriteObject)
                 }
-               
             }
-            // Context saves all changes.
             storage.save()
             successfull = true
         }
