@@ -1,7 +1,0 @@
-https://data.nasa.gov/resource/y77d-th95.json?id=53558
-
-https://data.nasa.gov/resource/y77d-th95.json?$$app_token=vkpZsq6vJE0i7wvOkP2ybNIbm&$where=year>="2011-01-01T00:00:00"&fall=Fell&$select=id,:updated_at,reclat,reclong,recclass,mass,year,name,fall
-
-https://data.nasa.gov/resource/y77d-th95.json?$$app_token=vkpZsq6vJE0i7wvOkP2ybNIbm&$where=year>="2011-01-01T00:00:00"AND:updated_at>"2011-01-01T00:00:00.000Z"&fall=Fell&$select=id,reclat,reclong,recclass,mass,year,name
-
-https://www-istp.gsfc.nasa.gov/stargaze/Slatlong.htm
