@@ -11,6 +11,8 @@ import UIKit
 
 class DataSync {
     
+    private let sourceDataSync = SourceDataSync()
+    
     /// Bool value saying if it is neccessary download new data.
     var needsUpdateData: Bool {
         var result = true
@@ -45,7 +47,7 @@ class DataSync {
         guard needsUpdateData else {
             return
         }
-        SourceDataSync().fetchMeteorites(all: needsDownloadAllData) { [unowned self] (error) in
+        sourceDataSync.fetchMeteorites(all: needsDownloadAllData) { [unowned self] (error) in
             if let error = error {
                 NSLog("Fetch error: \(error)")
             } else {
@@ -59,7 +61,7 @@ class DataSync {
         guard needsUpdateData else {
             return
         }
-        SourceDataSync().fetchMeteorites(all: needsDownloadAllData) { [unowned self] (error) in
+        sourceDataSync.fetchMeteorites(all: needsDownloadAllData) { [unowned self] (error) in
             if let error = error {
                 NSLog("Fetch error: \(error)")
             } else {

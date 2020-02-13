@@ -30,7 +30,6 @@
 		23FF73E923F446B400EDD5AC /* Meteorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73CD23F446B300EDD5AC /* Meteorite+CoreDataProperties.swift */; };
 		23FF73EA23F446B400EDD5AC /* MeteoriteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73CE23F446B300EDD5AC /* MeteoriteStorage.swift */; };
 		23FF73EB23F446B400EDD5AC /* Meteorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73CF23F446B300EDD5AC /* Meteorite+CoreDataClass.swift */; };
-		23FF73EC23F446B400EDD5AC /* MeteoriteDataURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D023F446B300EDD5AC /* MeteoriteDataURLFactory.swift */; };
 		23FF73ED23F446B400EDD5AC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D223F446B300EDD5AC /* DetailView.swift */; };
 		23FF73EE23F446B400EDD5AC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D323F446B300EDD5AC /* DetailViewController.swift */; };
 		23FF73EF23F446B400EDD5AC /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF73D423F446B300EDD5AC /* AppStarter.swift */; };
@@ -80,7 +79,6 @@
 		23FF73CD23F446B300EDD5AC /* Meteorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		23FF73CE23F446B300EDD5AC /* MeteoriteStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteoriteStorage.swift; sourceTree = "<group>"; };
 		23FF73CF23F446B300EDD5AC /* Meteorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataClass.swift"; sourceTree = "<group>"; };
-		23FF73D023F446B300EDD5AC /* MeteoriteDataURLFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteoriteDataURLFactory.swift; sourceTree = "<group>"; };
 		23FF73D223F446B300EDD5AC /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		23FF73D323F446B300EDD5AC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		23FF73D423F446B300EDD5AC /* AppStarter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 		23FF73C823F446B300EDD5AC /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				23FF73D023F446B300EDD5AC /* MeteoriteDataURLFactory.swift */,
 				23A55F8723F592C20055991A /* MeteoriteResponse.swift */,
 				23FF73C923F446B300EDD5AC /* SourceDataDownloader.swift */,
 				23FF73CC23F446B300EDD5AC /* SourceDataSync.swift */,
@@ -322,7 +319,6 @@
 				23FF73E323F446B400EDD5AC /* MasterViewController.swift in Sources */,
 				23FF73EB23F446B400EDD5AC /* Meteorite+CoreDataClass.swift in Sources */,
 				23FF73E123F446B400EDD5AC /* MasterSectionFooterView.swift in Sources */,
-				23FF73EC23F446B400EDD5AC /* MeteoriteDataURLFactory.swift in Sources */,
 				23FF73EE23F446B400EDD5AC /* DetailViewController.swift in Sources */,
 				23FF73DD23F446B400EDD5AC /* InformationSmallRowView.swift in Sources */,
 				23FF73DF23F446B400EDD5AC /* InformationIconsStackView.swift in Sources */,
