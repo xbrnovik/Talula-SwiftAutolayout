@@ -4,21 +4,9 @@ Zdravím, pôvodne bola táto aplikácia vypracovanie zadania a chcela som týmt
 
 Dokumentácia podstatnejších častí metód je už priamo v swift súboroch.
 
-V aplikácii som na tvorbu GUI použila SnapKit v ktorom je mi tvorba GUI prívetivejšia než Storyboard. V repozitári sa nachádza iba Podfile, a preto je potrebné:
+V aplikácii som na tvorbu GUI použila Swift Autolayout v kóde.
 
-- *pod install*
-- *pod update*
-
-Aplikácia využíva defaultnú priesvitnú časť safe arey. Nepriesvitná nepôsobila dobre, ale bola by možná.
-
-```swift
-// Safearea guidelines - Snapkit:
-if #available(iOS 11, *) {
-  make.top.equalTo(safeAreaLayoutGuide.snp.topMargin)
-} else {
-  make.top.equalToSuperview()
-}
-```
+Alternatívne som použila na tvorbu UI aj SnapKit: [Talula-SnapKit][talula-snapkit] 
 
 ## Sťahovanie dát
 
@@ -68,4 +56,7 @@ Keby bola aplikácia zložitejšia prichýlila by som sa k návrhovému vzoru `K
 Snáď aplikácia splnila zadanie, teším sa na spätnú väzbu! :)
 
 [soda-sdk]: <http://socrata.github.io/soda-swift/>
+
 [alamofire-sdk]: <https://github.com/Alamofire/Alamofire>
+
+[talula-snapkit]:<https://github.com/xbrnovik/Talula-SnapKit>
