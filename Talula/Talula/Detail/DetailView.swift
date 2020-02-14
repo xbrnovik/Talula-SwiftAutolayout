@@ -32,7 +32,7 @@ class DetailView: BaseView {
     override init() {
         super.init()
         self.setNeedsUpdateConstraints()
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
         self.view.addSubview(mapView)
         self.view.addSubview(scaleView)
     }

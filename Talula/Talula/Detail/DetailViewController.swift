@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     
     let detailView: DetailView = {
         let view = DetailView()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .systemBackground
         return view
     }()
     
