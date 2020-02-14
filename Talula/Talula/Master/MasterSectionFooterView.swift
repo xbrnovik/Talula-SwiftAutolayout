@@ -21,8 +21,7 @@ class MasterSectionFooterView: UIView {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor.black
-        label.font = Font.bodyFont
+        label.font = Font.body
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -43,7 +42,7 @@ class MasterSectionFooterView: UIView {
         
         if (!didSetupConstraints) {
 
-            backgroundColor = UIColor.white
+            backgroundColor = UIColor.clear
 
             NSLayoutConstraint.activate([
                 // separatorView

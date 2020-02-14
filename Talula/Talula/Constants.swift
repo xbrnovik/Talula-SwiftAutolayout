@@ -55,10 +55,12 @@ enum Map {
 }
 
 enum Font {
-    static let titleFont = UIFont.preferredFont(forTextStyle: .headline)
-    static let bodyFont = UIFont.preferredFont(forTextStyle: .body)
-    static let subtitleFont = UIFont.preferredFont(forTextStyle: .footnote)
-    static let boldMediumFont = UIFont.boldSystemFont(ofSize: 15)
+    static let title = UIFont.preferredFont(forTextStyle: .headline)
+    static let body = UIFont.preferredFont(forTextStyle: .body)
+    static let subtitle = UIFont.preferredFont(forTextStyle: .footnote)
+    static let boldMedium = UIFont.boldSystemFont(ofSize: 15)
+    static let title3 = UIFont.preferredFont(forTextStyle: .title3)
+    static let headline = UIFont.preferredFont(forTextStyle: .headline)
 }
 
 struct Formatter {

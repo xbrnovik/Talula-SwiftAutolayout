@@ -44,7 +44,7 @@ class InformationView: BaseView {
     let descriptionAppLabel: UILabel = {
         let label = UILabel()
         label.text = "This application shows the list of fallen meteorites on Earth since 2011 and also its count. The meteorites are sorted by their masses in descending order. Source data is obtained from NASA and it is updated periodically. In the detail of every fallen meteorite, the user can see its position on map."
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.font = Font.title3
         label.adjustsFontSizeToFitWidth = false
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -61,7 +61,7 @@ class InformationView: BaseView {
     let autorAppLabel: UILabel = {
         let label = UILabel()
         label.text = "This application was implemented by Diana Brnovik."
-        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        label.font = Font.headline
         label.adjustsFontSizeToFitWidth = false
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -78,7 +78,7 @@ class InformationView: BaseView {
     let licenseHeadlineLabel: UILabel = {
         let label = UILabel()
         label.text = "Icons"
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.font = Font.title3
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

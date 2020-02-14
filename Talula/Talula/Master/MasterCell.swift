@@ -27,7 +27,7 @@ class MasterCell: UITableViewCell {
         label.lineBreakMode = .byTruncatingTail
         label.adjustsFontSizeToFitWidth = false
         label.numberOfLines = 1
-        label.font = Font.titleFont
+        label.font = Font.title
         label.text = "Meteorite"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -39,7 +39,7 @@ class MasterCell: UITableViewCell {
         label.lineBreakMode = .byTruncatingTail
         label.adjustsFontSizeToFitWidth = false
         label.numberOfLines = 1
-        label.font = Font.subtitleFont
+        label.font = Font.subtitle
         label.text = "Mass"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
